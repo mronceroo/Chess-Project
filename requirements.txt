@@ -1,0 +1,132 @@
+# ============================================
+# Virtual Chess Mentor - Requirements
+# ============================================
+# Python 3.8+ required
+# For GPU acceleration, install CUDA-compatible PyTorch
+
+# ============================================
+# CORE DEPENDENCIES
+# ============================================
+
+# Computer Vision
+opencv-python>=4.8.0
+opencv-contrib-python>=4.8.0
+numpy>=1.24.0
+Pillow>=10.0.0
+
+# Deep Learning - YOLOv8
+ultralytics>=8.0.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# ============================================
+# NATURAL LANGUAGE PROCESSING
+# ============================================
+
+# Speech-to-Text (Whisper)
+openai-whisper>=20231117
+# Note: Whisper requires FFmpeg installed separately
+# Windows: Download from https://ffmpeg.org/download.html
+# Linux: sudo apt-get install ffmpeg
+# MacOS: brew install ffmpeg
+
+# Large Language Model Interface
+requests>=2.31.0
+# Note: Requires LM Studio running locally
+# Download from: https://lmstudio.ai/
+
+# Text-to-Speech (SpeechT5)
+transformers>=4.35.0
+sentencepiece>=0.1.99
+accelerate>=0.24.0
+
+# ============================================
+# AUDIO PROCESSING
+# ============================================
+
+sounddevice>=0.4.6
+soundfile>=0.12.1
+scipy>=1.11.0
+
+# ============================================
+# UTILITIES
+# ============================================
+
+# Data handling
+pandas>=2.0.0
+
+# Progress bars
+tqdm>=4.66.0
+
+# Configuration
+pyyaml>=6.0.0
+
+# Logging
+colorama>=0.4.6
+
+# ============================================
+# OPTIONAL - PERFORMANCE & MONITORING
+# ============================================
+
+# GPU acceleration (if available)
+# Uncomment if you have NVIDIA GPU with CUDA
+# torch==2.0.0+cu118 -f https://download.pytorch.org/whl/torch_stable.html
+# torchvision==0.15.0+cu118 -f https://download.pytorch.org/whl/torch_stable.html
+
+# Performance monitoring
+psutil>=5.9.0
+
+# Jupyter support (for notebooks)
+# jupyter>=1.0.0
+# ipykernel>=6.25.0
+
+# ============================================
+# DEVELOPMENT DEPENDENCIES (Optional)
+# ============================================
+
+# Testing
+# pytest>=7.4.0
+# pytest-cov>=4.1.0
+
+# Code quality
+# black>=23.7.0
+# flake8>=6.1.0
+# mypy>=1.5.0
+
+# ============================================
+# NOTES
+# ============================================
+# 
+# Installation:
+# 1. Create virtual environment:
+#    python -m venv venv
+#    source venv/bin/activate  # Linux/Mac
+#    venv\Scripts\activate     # Windows
+#
+# 2. Install requirements:
+#    pip install -r requirements.txt
+#
+# 3. Install FFmpeg separately (see above)
+#
+# 4. Download and setup LM Studio:
+#    - Download from https://lmstudio.ai/
+#    - Download Hermes 3 Llama 3.2 - 3B model
+#    - Start local server on port 1234
+#
+# 5. On first run, models will be downloaded:
+#    - YOLOv8 weights (~6MB)
+#    - Whisper model (~1.5GB for medium)
+#    - SpeechT5 embeddings (~400MB)
+#
+# GPU Support:
+# - For CUDA 11.8: Use torch 2.0.0+cu118
+# - For CUDA 12.1: Use torch 2.0.0+cu121
+# - Check: https://pytorch.org/get-started/locally/
+#
+# Minimum System Requirements:
+# - RAM: 8GB (16GB recommended with LLM)
+# - Storage: 5GB free space
+# - Webcam or external camera
+# - Microphone (built-in or external)
+#
+# ============================================
